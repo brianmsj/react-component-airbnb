@@ -23,15 +23,17 @@ export default class List extends React.Component {
     render(){
 
     if(this.state.render ) {
-    	return <div className = "list"> GUEST FILTERS
-      		 <button type="submit" onClick = {this.renderCard}> </button>
+    	return <div className = "list">  
+      		 <button type="submit" onClick =
+      		  {this.renderCard}> FILTER</button>
      		<Card />
     	</div>
  	}    	
 
     return (
-      <div className = "list"> GUEST FILTERS
-       <button type="submit" onClick = {this.renderCard}> </button>
+      <div className = "list"> 
+       <button type="submit" onClick = 
+       {this.renderCard}> FILTER </button>
      	
     </div>
     );
