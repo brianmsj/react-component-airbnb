@@ -7,19 +7,31 @@
 .list {
   background-color: white;
   border: .5px solid grey;
-  
+
   display: inline-block;
   margin: 10px;
 
-  
+
 }
 .person {
   background-color: white;
-   
-   
+
+
 }
 
 .filter {
-	 
+
 	 margin:10px;
+}
+
+.home {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  display: inline-block;
+}
+
+.home-image {
+  width: 200px;
+  height: 200px;
 }
