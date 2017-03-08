@@ -1,11 +1,26 @@
 .nav {
-  background-color: grey;
+  background-color: white;
+  border: .5px solid grey;
 }
 
 
 .list {
-  background-color: blue;
-}
-.card {
   background-color: white;
+  border: .5px solid grey;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  margin: 10px;
+
+  
+}
+.person {
+  background-color: white;
+   
+   
+}
+
+.filter {
+	 
+	 margin:10px;
 }

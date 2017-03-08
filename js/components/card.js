@@ -18,14 +18,14 @@ export default class Card extends React.Component {
     const children = this.state.children;
     const infants = this.state.infants;
     return (
-        <div className="person">
-            <div className="">{`Number of Adults ${adult}`}
+        <div className= "person">
+            <div className="filter">{`Number of Adults ${adult}`}
               <button type="submit" className = "button"></button>
             </div>
-            <div className="person-img">{`Number of Children ${children}`}
+            <div className="filter">{`Number of Children ${children}`}
                <button type="submit" className = "button"></button>
             </div>
-            <div className="person-job">{`Number of Infants ${infants}`}
+            <div className="filter">{`Number of Infants ${infants}`}
                <button type="submit" className = "button"></button>
             </div>
         </div>
