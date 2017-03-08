@@ -77,6 +77,7 @@ export default class Card extends React.Component {
               <button type="submit" className = "button" onClick =
               {this.increaseInfants}> + </button>
             </div>
+              <button type="submit" className = "applyButton"> Apply </button>
         </div>
     );
   }

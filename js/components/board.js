@@ -49,9 +49,12 @@ export default class Board extends React.Component {
 
   render() {
 
-    const displayHomes = this.state.homes.map(house => <div className="home" key={house.id}>{house.price}
+
+
+
+    const displayHomes = this.state.homes.map(house => <div className="home" key={house.id}> Rent {house.price}
     <img className = "home-image" src = {house.image}/>
-    <p>{house.guests}</p>
+    <p>This House Sleeps {house.guests}</p>
     </div>);
     return (
 
