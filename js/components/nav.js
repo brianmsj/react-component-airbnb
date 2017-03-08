@@ -7,8 +7,7 @@ export default function Nav(props){
    <div className = "nav">
       <h1>Nav</h1>
       <List/>
-      <List/>
-      <List/>
+     
 
    </div>
 );

@@ -8,6 +8,7 @@ export default class List extends React.Component {
     super(props);
     this.state = {
       render: false,
+
     };
     this.renderCard = this.renderCard.bind(this);
   }
@@ -21,10 +22,17 @@ export default class List extends React.Component {
 
     render(){
 
+    if(this.state.render ) {
+    	return <div className = "list"> GUEST FILTERS
+      		 <button type="submit" onClick = {this.renderCard}> </button>
+     		<Card />
+    	</div>
+ 	}    	
+
     return (
       <div className = "list"> GUEST FILTERS
        <button type="submit" onClick = {this.renderCard}> </button>
-     	 <Card/>
+     	
     </div>
     );
   }
