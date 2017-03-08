@@ -8,6 +8,12 @@ export default class Card extends React.Component {
       children: 0,
       infants: 0
     };
+     this.increaseAdults = this.increaseAdults.bind(this);
+      this.decreaseAdults = this.decreaseAdults.bind(this);
+       this.increaseChildren = this.increaseChildren.bind(this);
+        this.decreaseChildren = this.decreaseChildren.bind(this);
+         this.increaseInfants = this.increaseInfants.bind(this);
+          this.decreaseInfants = this.decreaseInfants.bind(this);
 
   }
 
@@ -58,16 +64,22 @@ export default class Card extends React.Component {
     return (
         <div className= "person">
             <div className="filter">{`Number of Adults ${adult}   `}
-              <button type="submit" className = "button"> - </button>
-              <button type="submit" className = "button"> + </button>
+              <button type="submit" className = "button" onClick = 
+              {this.decreaseAdults}> - </button>
+              <button type="submit" className = "button" onClick = 
+              {this.increaseAdults} > + </button>
             </div>
             <div className="filter">{`Number of Children ${children}   `}
-               <button type="submit" className = "button"> - </button>
-              <button type="submit" className = "button"> + </button>
+               <button type="submit" className = "button" onClick = 
+              {this.decreaseChildren}> - </button>
+              <button type="submit" className = "button" onClick = 
+              {this.increaseChildren}> + </button>
             </div>
             <div className="filter">{`Number of Infants ${infants}   `}
-               <button type="submit" className = "button"> - </button>
-              <button type="submit" className = "button"> + </button>
+               <button type="submit" className = "button" onClick = 
+              {this.decreaseInfants}> - </button>
+              <button type="submit" className = "button" onClick = 
+              {this.increaseInfants}> + </button>
             </div>
         </div>
     );
