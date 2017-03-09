@@ -7,7 +7,7 @@ export default function Nav(props){
    <div className = "nav">
       <h1>AIRBNB</h1>
       <p>Luxury edition</p>
-      <List/>
+      <List onFilter = {props.onFilter}/>
 
 
 

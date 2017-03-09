@@ -8,6 +8,7 @@ export default class Board extends React.Component {
   constructor () {
     super();
     this.state = {
+      minGuests: 0,
       homes: [
              {
               image: 'http://www.coastalhomeinspectors.com/wp-content/uploads/2015/09/Home-Inspectors-Cape-Coral-FL.jpg',
@@ -47,18 +48,25 @@ export default class Board extends React.Component {
         };
   }
 
+  handleFilter(filter) {
+    // here, make sure only showing homes as appropriate // modify minGuests when we get a new filter
+  }
+
   render() {
 
 
 
 
-    const displayHomes = this.state.homes.map(house => <div className="home" key={house.id}> Rent {house.price}
-    <img className = "home-image" src = {house.image}/>
-    <p>This House Sleeps {house.guests}</p>
-    </div>);
+    const displayHomes = this.state.homes
+      .filter(house => this.state.minGuests < house.guests)
+      .map(house => <div className="home" key={house.id}> Rent {house.price}
+        <img className = "home-image" src = {house.image}/>
+        <p>This House Sleeps {house.guests}</p>
+        </div>
+      );
     return (
 
-      <div className = "homes"><Nav/>{displayHomes}
+      <div className = "homes"><Nav onFilter = {this.handleFilter}/>{displayHomes}
       </div>
     );
   }

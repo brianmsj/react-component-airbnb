@@ -8,50 +8,18 @@ export default class Card extends React.Component {
       children: 0,
       infants: 0
     };
-     this.increaseAdults = this.increaseAdults.bind(this);
-      this.decreaseAdults = this.decreaseAdults.bind(this);
-       this.increaseChildren = this.increaseChildren.bind(this);
-        this.decreaseChildren = this.decreaseChildren.bind(this);
-         this.increaseInfants = this.increaseInfants.bind(this);
-          this.decreaseInfants = this.decreaseInfants.bind(this);
+    this.increaseAdults = this.modify.bind(this, "adults", 1);
+    this.decreaseAdults = this.modify.bind(this, "adults", -1);
+    this.increaseChildren = this.modify.bind(this, "children", 1);
+    this.decreaseChildren = this.modify.bind(this, "children", -1);
+    this.increaseInfants = this.modify.bind(this, "infants", 1);
+    this.decreaseInfants = this.modify.bind(this, "infants", -1);
   }
-    increaseAdults(){
+    modify(field, modifier){
       this.setState({
-        adults: this.state.adults += 1
+        [field]: this.state[field] += modifier
       });
     }
-
-    decreaseAdults(){
-      this.setState({
-        adults: this.state.adults -=1
-      });
-    }
-
-    increaseChildren(){
-      this.setState({
-        children: this.state.children += 1
-      });
-    }
-
-    decreaseChildren(){
-      this.setState({
-        children: this.state.children -=1
-      });
-    }
-
-
-    increaseInfants(){
-      this.setState({
-        infants: this.state.infants += 1
-      });
-    }
-
-    decreaseInfants(){
-      this.setState({
-        infants: this.state.infants -=1
-      });
-    }
-
 
     render() {
     const adult = this.state.adults;

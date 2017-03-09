@@ -36,3 +36,9 @@
   width: 200px;
   height: 200px;
 }
+.button {
+  border-radius: 50%;
+  background-color: white;
+  height: 50px;
+  width: 50px;
+}
